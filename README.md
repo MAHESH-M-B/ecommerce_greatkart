@@ -1,5 +1,4 @@
-"# ecommerce_python" 
-#"docker technology also included"
+ecommerce_python
 
 Run the project from Docker container
 
