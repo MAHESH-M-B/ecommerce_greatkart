@@ -10,21 +10,21 @@
 <link rel="shortcut icon" type="image/x-icon" href=" {% static 'images/favicon.ico' %}">
 
 <!-- jQuery -->
-<script src="/media/js/jquery-2.0.0.min.js" type="text/javascript"></script>
+<script src="{% static '/js/jquery-2.0.0.min.js' %}" type="text/javascript"></script>
 
 <!-- Bootstrap4 files-->
-<script src="/media/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<link href="/media/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}" type="text/javascript"></script>
+<link href="{% static '/css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
 
 <!-- Font awesome 5 -->
-<link href="/media/fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+<link href="{% static '/fonts/fontawesome/css/all.min.css' %}" type="text/css" rel="stylesheet">
 
 <!-- custom style -->
-<link href="/media/css/ui.css" rel="stylesheet" type="text/css"/>
-<link href="/media/css/responsive.css" rel="stylesheet" />
+<link href="{% static '/css/ui.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static '/css/responsive.css' %}" rel="stylesheet" />
 
 <!-- custom javascript -->
-<script src="/media/js/script.js" type="text/javascript"></script>
+<script src="{% static '/js/script.js' %}" type="text/javascript"></script>
 
 <script type="text/javascript">
 /// some script
@@ -68,7 +68,7 @@ $(document).ready(function() {
 		<div class="row align-items-center">
 			<div class="col-lg-2 col-4">
 				<div class="brand-wrap">
-					<img class="logo" src="images/logo.png">
+					<img class="logo" src="{% static 'images/logo.png' %}">
 				</div> <!-- brand-wrap.// -->
 			</div>
 			<div class="col-lg-6 col-sm-12">
