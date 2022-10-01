@@ -19,3 +19,14 @@ class Account(AbstractBaseUser):
     is_superadmin=models.BooleanField(default=False)
 
     USERNAME_FIELD='email'
+    REQUIRED_FIELDS=['username','first_name','last_name']
+
+
+    def __str__(self):
+        return self.email
+
+
+    def has_perm(self,perm,obj=None):
+        return self.is_admin
+
+    l
