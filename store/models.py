@@ -4,7 +4,7 @@ from category.models import Category
 
 
 # Create your models here.
-class Products(models.Model):
+class Product(models.Model):
     product_name = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     description = models.CharField(max_length=250, blank=True)
