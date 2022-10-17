@@ -8,5 +8,5 @@ router.register(r'Account', AccountViewset)
 
 
 urlpatterns = [
-   path('', include(router.urls)),
+   path('accounts_api/', include(router.urls)),
 ]
