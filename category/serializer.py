@@ -6,7 +6,6 @@ from .models import Category
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
-        model=Category
+        model = Category
         # fields=('category_name','slug','description','cat_image')
-        fields='__all__'
-
+        fields = '__all__'

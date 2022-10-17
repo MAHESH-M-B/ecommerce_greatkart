@@ -3,10 +3,10 @@ from rest_framework import routers
 
 from .views import AccountViewset
 
-router=routers.DefaultRouter()
+router = routers.DefaultRouter()
 router.register(r'Account', AccountViewset)
 
 
 urlpatterns = [
-   path('accounts_api/', include(router.urls)),
+    path('accounts_api/', include(router.urls)),
 ]
