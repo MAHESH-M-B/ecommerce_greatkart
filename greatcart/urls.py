@@ -18,12 +18,15 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
+from store.views import store_import
+
 from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
     path('admin/', admin.site.urls),
-    path('store/', include('store.urls')),
+    # path('store/',include('store.urls')),
+    path('store/', store_import.store, name='store'), 
     path('api/', include('category.urls')),
     path('api/', include('accounts.urls')),
     path('api/', include('store.urls')),
