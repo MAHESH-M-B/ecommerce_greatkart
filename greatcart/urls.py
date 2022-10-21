@@ -23,9 +23,6 @@ from store.views import store_import
 from . import views
 
 urlpatterns = [
-
-
-    
     path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     # path('store/',include('store.urls')),
