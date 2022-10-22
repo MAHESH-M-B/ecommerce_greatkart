@@ -18,17 +18,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
-from store.views import store_import
+from store import views
 
-from . import views
-
+from greatcart import views
 urlpatterns = [
-    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
-    # path('store/',include('store.urls')),
-    path('store/', store_import.store, name='store'),
-    path('<slug:category_slug>/', store_import.store, name='product_by_category'),
-    path('api/', include('category.urls')),
-    path('api/', include('accounts.urls')),
-    path('api/', include('store.urls')),
+    path('', views.home, name='home'),
+    path('', include('store.urls')),
+    path('', include('category.urls')),
+    path('', include('accounts.urls')),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
