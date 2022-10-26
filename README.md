@@ -1,4 +1,4 @@
-ecommerce_python
+ecommerce_greatkart
 
 Run the project from Docker container
 
