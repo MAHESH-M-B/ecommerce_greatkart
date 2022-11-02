@@ -1,12 +1,4 @@
 
-import email
-from email.policy import default
-from importlib.util import find_spec
-from re import T
-from statistics import mode
-from tkinter.tix import Tree
-from urllib import request
-
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.db import models
 
