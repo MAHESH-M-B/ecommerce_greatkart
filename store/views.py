@@ -7,7 +7,6 @@ from .models import Product
 from .serializer import ProductSerializer
 # Create your views here.
 
-
 def store(request, category_slug=None):
     categories = None
     products = None
