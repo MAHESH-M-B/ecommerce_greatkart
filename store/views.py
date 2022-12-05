@@ -25,6 +25,9 @@ def store(request, category_slug=None):
     return render(request, 'store/store.html', context)
 
 
+def product_detail(request,category_slug=None,product_slug=None):
+    return render(request,'store/product_detail.html')
+
 class Productviewset(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     queryset = Product.objects.all()
