@@ -25,8 +25,15 @@ def store(request, category_slug=None):
     return render(request, 'store/store.html', context)
 
 
-def product_detail(request,category_slug=None,product_slug=None):
-    return render(request,'store/product_detail.html')
+def product_detail(request,category_slug,product_slug):
+    try:
+        single_product=Product.objects.get(category__slug=category_slug,slug=product_slug)
+    except Exception:
+        raise Exception
+    context={
+        'single_product':single_product
+    }
+    return render(request,'store/product_detail.html',context)
 
 class Productviewset(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
