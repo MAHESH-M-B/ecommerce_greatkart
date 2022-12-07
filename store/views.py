@@ -34,7 +34,6 @@ def product_detail(request,category_slug,product_slug):
     context={
         'single_product':single_product,
     }
-    print(context)
     return render(request,'store/product_detail.html',context)
 
 class Productviewset(viewsets.ModelViewSet):
